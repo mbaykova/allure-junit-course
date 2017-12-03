@@ -30,7 +30,6 @@ public class ExampleTest extends BaseSteps {
         testData.put("Регион","Москва");
         testData.put("Телефон","9191111112");
         testData.put("Эл. почта","teststststs");
-        testData.put("Дата контакта","10.10.2017");
         testData.put("Комментарии","Autotest");
 
         mainPageSteps.selectMenuItem("Страхование");
