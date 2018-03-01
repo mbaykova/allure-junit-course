@@ -1,11 +1,12 @@
-package my.company.tests;
 
+
+import io.qameta.allure.junit4.DisplayName;
 import my.company.steps.BaseSteps;
 import my.company.steps.DMSSteps;
 import my.company.steps.MainPageSteps;
 import my.company.steps.SendAppSteps;
 import org.junit.Test;
-import ru.yandex.qatools.allure.annotations.Title;
+
 
 import java.util.HashMap;
 
@@ -21,7 +22,7 @@ public class ExampleTest extends BaseSteps {
     HashMap<String, String> testData = new HashMap<>();
 
 
-    @Title("Заявка на ДМС")
+    @DisplayName("Заявка на ДМС")
     @Test
     public void Test(){
         testData.put("Имя","Иван");

@@ -2,8 +2,9 @@ package my.company.steps;
 
 
 
+import io.qameta.allure.Step;
 import my.company.pages.DMSPage;
-import ru.yandex.qatools.allure.annotations.Step;
+
 
 import static org.junit.Assert.assertTrue;
 

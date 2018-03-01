@@ -2,7 +2,7 @@ package my.company.steps;
 
 
 import my.company.pages.SendAppPage;
-import ru.yandex.qatools.allure.annotations.Step;
+import io.qameta.allure.Step;
 
 import java.util.HashMap;
 

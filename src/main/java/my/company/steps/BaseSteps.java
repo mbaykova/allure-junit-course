@@ -1,5 +1,6 @@
 package my.company.steps;
 
+import io.qameta.allure.Attachment;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -7,8 +8,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import ru.yandex.qatools.allure.annotations.Attachment;
-import ru.yandex.qatools.allure.annotations.Step;
+
 
 import java.util.concurrent.TimeUnit;
 

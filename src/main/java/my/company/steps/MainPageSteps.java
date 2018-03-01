@@ -3,7 +3,7 @@ package my.company.steps;
 
 
 import my.company.pages.MainPage;
-import ru.yandex.qatools.allure.annotations.Step;
+import io.qameta.allure.Step;
 
 /**
  * Created by Maria on 29.04.2017.
