@@ -3,6 +3,7 @@ package my.company.pages;
 
 
 import my.company.steps.BaseSteps;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,6 +35,7 @@ public class MainPage {
                 return;
             }
         }
+        Assert.fail("Не найден элмент коллеции - " + itemName);
     }
 
     public void selectInsuranceItem(String itemName){
@@ -43,6 +45,7 @@ public class MainPage {
                 return;
             }
         }
+        Assert.fail("Не найден элмент коллеции - " + itemName);
     }
 }
 
