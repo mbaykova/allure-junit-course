@@ -41,8 +41,8 @@ public class ExampleTest extends BaseSteps {
 
         sendAppSteps.fillFields(testData);
 
-        testData.put("Телефон","+7 (919) 111-11-11");
+        testData.put("Телефон","+7 (919) 111-11-12");
         sendAppSteps.checkFillFields(testData);
-        sendAppSteps.checkErrorMessageField("Эл. почта", "Введите корректный email");
+        sendAppSteps.checkErrorMessageField("Эл. почта", "Введите адрес электронной почты");
     }
 }
