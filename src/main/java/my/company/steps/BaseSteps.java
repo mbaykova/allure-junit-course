@@ -1,9 +1,9 @@
 package my.company.steps;
 
 import io.qameta.allure.Attachment;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -22,7 +22,7 @@ public class BaseSteps {
         return driver;
     }
 
-    @Before
+    @BeforeEach
     public void startScenario(){
         System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
         driver = new ChromeDriver();
@@ -32,8 +32,8 @@ public class BaseSteps {
         driver .manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
 
-    @AfterClass
-    public static void afterMethod(){
+    @AfterEach
+    public void afterMethod(){
         driver .quit();
     }
 

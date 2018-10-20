@@ -3,10 +3,12 @@ package my.company.steps;
 
 import my.company.pages.SendAppPage;
 import io.qameta.allure.Step;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.HashMap;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 /**
  * Created by Maria on 06.05.2017.
@@ -21,8 +23,7 @@ public class SendAppSteps {
     @Step("поле {0} заполнено значением {1}")
     public void checkFillField(String field, String value){
         String actual = new SendAppPage().getFillField(field);
-        assertTrue(String.format("Значение поля [%s] равно [%s]. Ожидалось - [%s]", field, actual, value),
-                actual.equals(value));
+        assertTrue(actual.equals(value), String.format("Значение поля [%s] равно [%s]. Ожидалось - [%s]", field, actual, value));
     }
 
     @Step("в поле {0} присутствует сообщение об ошибке {1}")
@@ -33,8 +34,8 @@ public class SendAppSteps {
     @Step("заголовок страницы - Отправить заявку равен {0}")
     public void checkPageTitle(String expectedTitle){
         String actualTitle = new SendAppPage().title.getText();
-        assertTrue(String.format("Заголовок равен [%s]. Ожидалось - [%s]",
-                actualTitle, expectedTitle), actualTitle.contains(expectedTitle));
+        assertTrue( actualTitle.contains(expectedTitle), String.format("Заголовок равен [%s]. Ожидалось - [%s]",
+            actualTitle, expectedTitle));
     }
 
     @Step("заполняются поля")

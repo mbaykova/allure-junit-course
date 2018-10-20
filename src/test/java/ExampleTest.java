@@ -1,11 +1,11 @@
 
 
-import io.qameta.allure.junit4.DisplayName;
 import my.company.steps.BaseSteps;
 import my.company.steps.DMSSteps;
 import my.company.steps.MainPageSteps;
 import my.company.steps.SendAppSteps;
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 
 import java.util.HashMap;
@@ -43,6 +43,6 @@ public class ExampleTest extends BaseSteps {
 
         testData.put("Телефон","+7 (919) 111-11-12");
         sendAppSteps.checkFillFields(testData);
-        sendAppSteps.checkErrorMessageField("Эл. почта", "Введите адрес электронной почты");
+        sendAppSteps.checkErrorMessageField("Эл. почта", "Введите адрес электронной почты34343434");
     }
 }
